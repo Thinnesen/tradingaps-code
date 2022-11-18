@@ -1,3 +1,3 @@
 # tradingaps-code
 Source Code for TradingApS applications \ 
-https://user-images.githubusercontent.com/92097991/202725412-ad1e66fb-afb2-459c-9fb8-1ce3d48e2d13.png
+![image](https://user-images.githubusercontent.com/92097991/202725934-cb35beb1-052f-42d8-8e68-a4648ec36c63.png)
