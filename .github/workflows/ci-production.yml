@@ -33,6 +33,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.GIT_PAT }}
-        repository: thinnesen/tradingaps_production
+        repository: thinnesen/tradingaps-manifest
         event-type: new-image-production
         client-payload: '{"image": "thinnesen/tradingaps_production:${{ github.run_number }}"}'
