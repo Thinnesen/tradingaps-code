@@ -32,7 +32,7 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.MY_GITHUB_TOKEN }}
+        token: ${{ secrets.GIT_PAT }}
         repository: thinnesen/tradingaps_production
         event-type: new-image-production
         client-payload: '{"image": "thinnesen/tradingaps_production:${{ github.run_number }}"}'
