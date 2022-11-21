@@ -2,9 +2,15 @@ name: ci
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
+    paths:
+      - website-app/**
   pull_request:
-    branches: [ "main" ]
+    branches: 
+      - main
+    paths:
+      - website-app/**
   workflow_dispatch:
 env:
   IMAGE_NAME: tradingaps_production
