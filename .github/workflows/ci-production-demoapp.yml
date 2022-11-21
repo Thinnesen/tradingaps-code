@@ -42,4 +42,4 @@ jobs:
         token: ${{ secrets.GIT_PAT }}
         repository: thinnesen/tradingaps-manifest
         event-type: new-image-production
-        client-payload: '{"image": "thinnesen/thinnesen/tradingaps_production_demoapp:${{ github.run_number }}"}'
+        client-payload: '{"image": "thinnesen/tradingaps_production_demoapp:${{ github.run_number }}"}'
