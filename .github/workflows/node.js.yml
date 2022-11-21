@@ -5,10 +5,16 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
+    paths:
+      - demo-app/**
   pull_request:
-    branches: [ "main" ]
-
+    branches: 
+      - main
+    paths:
+      - demo-app/**
+      
 jobs:
   build:
 
