@@ -27,7 +27,7 @@ jobs:
         context: .
         push: true
         tags: thinnesen/tradingaps_production:${{ github.run_number }}
-        file: /website-app/dockerfile
+        file: website-app/dockerfile
 
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v1
