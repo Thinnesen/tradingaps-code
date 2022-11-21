@@ -11,6 +11,7 @@ on:
       - main
     paths:
       - website-app/**
+
   workflow_dispatch:
 env:
   IMAGE_NAME: tradingaps_production
