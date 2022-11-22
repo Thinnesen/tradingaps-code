@@ -14,7 +14,11 @@ on:
       - main
     paths:
       - demo-app/**
-      
+
+defaults:
+  run:
+    working-directory: ./home/node/app
+
 jobs:
   build:
 
