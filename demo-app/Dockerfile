@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY / ./
 
-RUN dotnet publish ThinnesenApi/ThinnesenApi.csproj --configuration Release --source https://api.nuget.org/v3/index.json --output out
+RUN dotnet publish demo-app/ThinnesenApi/ThinnesenApi.csproj --configuration Release --source https://api.nuget.org/v3/index.json --output out
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 WORKDIR /app
