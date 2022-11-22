@@ -7,7 +7,7 @@ on:
   push:
     branches: 
       - main
-#    paths:
+    paths:
       - demo-app/**
   pull_request:
     branches: 
