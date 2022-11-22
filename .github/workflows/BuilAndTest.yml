@@ -20,10 +20,13 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.x.x
+      - name: install-dependencies
+        run: dotnet restore demo-app/ThinnesenApi/ThinnesenApi.csproj
       - name: Build with dotnet
         run: dotnet build --configuration Release demo-app/ThinnesenApi/ThinnesenApi.csproj
       - name: Test with dotnet
         run: dotnet test --configuration Release --no-build demo-app/ThinnesenApi.Tests/ThinnesenApi.Tests.csproj
+        
     
       - name: Login to DockerHub
         uses: docker/login-action@v1
