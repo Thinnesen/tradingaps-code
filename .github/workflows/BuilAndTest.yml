@@ -24,3 +24,26 @@ jobs:
         run: dotnet build --configuration Release
       - name: Test with dotnet
         run: dotnet test --configuration Release --no-build
+    
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: thinnesen/tradingaps_production_demoapp:${{ github.run_number }}
+          file: demo-app/Dockerfile
+          working-directory: ./demo-app
+
+#      - name: Repository Dispatch
+#        uses: peter-evans/repository-dispatch@v1
+#        with:
+#          token: ${{ secrets.GIT_PAT }}
+#          repository: thinnesen/tradingaps-manifest
+#          event-type: new-image-production_demoapp
+#          client-payload: '{"image": "thinnesen/tradingaps_production_demoapp:${{ github.run_number }}"}'  
