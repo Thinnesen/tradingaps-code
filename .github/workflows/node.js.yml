@@ -22,7 +22,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -31,12 +31,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: '**/package.json'
-    - name: Run in background
+ #       cache-dependency-path: '**/package.json'
+    - name: Install dependencies
+      run: npm ci
+    - name: database-dependency
       run:
         sudo docker run -d -p 27017:27017 mongo:latest
-        npm ci
-        npm run build --if-present
+    - name: Build
+      run: npm run build --if-present
     - name: Testing
       run: npm test &
       env: 
