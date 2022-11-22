@@ -1,7 +1,16 @@
+name: Node.js CI
+
 on:
   push:
-    branches:
-      - "master"
+    branches: 
+      - main
+    paths:
+      - demo-app/**
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - demo-app/**
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
