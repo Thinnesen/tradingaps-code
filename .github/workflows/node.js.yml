@@ -22,7 +22,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -57,10 +57,10 @@ jobs:
         tags: thinnesen/tradingaps_production_demoapp:${{ github.run_number }}
         file: demo-app/dockerfile
 
-    - name: Repository Dispatch
-      uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.GIT_PAT }}
-        repository: thinnesen/tradingaps-manifest
-        event-type: new-image-production
-        client-payload: '{"image": "thinnesen/tradingaps_production_demoapp:${{ github.run_number }}"}'        
+#    - name: Repository Dispatch
+#      uses: peter-evans/repository-dispatch@v1
+#      with:
+#        token: ${{ secrets.GIT_PAT }}
+#        repository: thinnesen/tradingaps-manifest
+#        event-type: new-image-production
+#        client-payload: '{"image": "thinnesen/tradingaps_production_demoapp:${{ github.run_number }}"}'        
