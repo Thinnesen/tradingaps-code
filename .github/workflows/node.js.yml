@@ -15,9 +15,9 @@ on:
     paths:
       - demo-app/**
 
-defaults:
-  run:
-    working-directory: /home/node/app
+#defaults:
+#  run:
+#    working-directory: /home/node/app
 
 jobs:
   build:
@@ -34,9 +34,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: "**/package.json"
+        cache-dependency-path: "demo-app/package.json"
     - name: Install dependencies
-      run: npm install
+      run: npm install ./demo-app
     - name: database-dependency
       run:
         sudo docker run -d -p 27017:27017 mongo:latest
