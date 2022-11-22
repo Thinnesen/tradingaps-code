@@ -30,8 +30,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: "./demo-app/package.json"
     - name: Install dependencies
-      run: npm ci 
+      run: npm install
     - name: database-dependency
       run:
         sudo docker run -d -p 27017:27017 mongo:latest
