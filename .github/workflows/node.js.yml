@@ -17,7 +17,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./home/node/app
+    working-directory: /home/node/app
 
 jobs:
   build:
