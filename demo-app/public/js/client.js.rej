@@ -1,0 +1,8 @@
+diff a/public/js/client.js b/public/js/client.js	(rejected hunks)
+@@ -1,5 +1,6 @@
+ $(function(){
+ 	$.get('/counties', appendToList);
++
+ 	function appendToList(counties){
+ 		var list = ['<option value="vazio"></option>'];
+ 		$('#infocenas').hide();

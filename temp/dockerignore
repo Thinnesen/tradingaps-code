@@ -1,0 +1,9 @@
+.vscode
+.dhiwise
+.git
+*Dockerfile*
+*DockerFile*
+*dockerfile*
+*docker-compose*
+node_modules
+package.json
