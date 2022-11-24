@@ -33,6 +33,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           event-type: test_succeeded
-        #  client-payload: '{"greet": "${{ steps.maybe-greet.outputs.GREET }}"}'
+          client-payload: '{"github": ${{ toJson(github) }}}'
 
 
