@@ -2,10 +2,11 @@ name: Node.js [Dockerhub]
 
 on:
   repository_dispatch:
-    types: [test_succeeded]
+    types: [new-image-production_demoapp]
 jobs:
   build:
     runs-on: ubuntu-latest
+    needs: 'build-and-test'
     steps:
       - name: Login to DockerHub
         uses: docker/login-action@v1
