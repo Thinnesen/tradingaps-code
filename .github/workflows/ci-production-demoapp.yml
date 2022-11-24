@@ -30,7 +30,7 @@ jobs:
 
       - name: Repository Dispatch
      #   if: github.event.pull_request.merged
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           event-type: test_succeeded
           client-payload: '{"github": ${{ toJson(github) }}}'
