@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       - '**'
-      - '!master'
     paths:
       - demo-app/**
   pull_request:
