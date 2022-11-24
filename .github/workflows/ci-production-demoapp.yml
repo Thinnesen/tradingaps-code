@@ -31,7 +31,7 @@ jobs:
   push-dockerhub:
     runs-on: ubuntu-latest
     needs: 'build-and-test'
-    if: github.event.pull_request.merged
+    if: github.event.pull_request.merged == true
     steps:
       - name: Login to DockerHub
         uses: docker/login-action@v1
