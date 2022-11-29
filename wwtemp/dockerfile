@@ -1,7 +1,0 @@
-FROM node:14.16.0 
-WORKDIR /home/node/app
-COPY ./demo-app/package.json .
-RUN npm i
-COPY . .
-EXPOSE 5000
-CMD ["npm", "run", "start"]
