@@ -18,13 +18,13 @@ on:
     paths:
       - demo-app/**
   pull_request:
-    types: [ closed, opened ]
+    types: [ closed ]
     branches: 
       - 'main'
     paths:
       - demo-app/**
   schedule:
-    - cron: '28 17 * * 6'
+    - cron: '15 10 * * *' #10:15 AM - dagligt 
 
 jobs:
   analyze:
