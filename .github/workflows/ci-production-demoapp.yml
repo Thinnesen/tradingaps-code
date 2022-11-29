@@ -1,4 +1,4 @@
-name: Production_DemoApp_CI
+name: ci-production-demoapp
 
 on:
   push:
