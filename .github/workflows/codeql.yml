@@ -19,7 +19,7 @@ on:
       - demo-app/**
 
   schedule:
-    - cron: '15 10 * * *' #10:15 AM - dagligt 
+    - cron: '15 10 * * *' #11:30 AM - dagligt 
 
 jobs:
   analyze:
