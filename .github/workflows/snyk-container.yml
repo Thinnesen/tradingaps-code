@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build a Docker image
-      run: docker build -t thinnesen/application-tradingaps .
+      run: docker build -t thinnesen/application-tradingaps:latest .
     - name: Run Snyk to check Docker image for vulnerabilities
       # Snyk can be used to break the build when it detects vulnerabilities.
       # In this case we want to upload the issues to GitHub Code Scanning
@@ -48,7 +48,7 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         context: .
-        image: thinnesen/application-tradingaps
+        image: thinnesen/application-tradingaps:latest
         file: demo-app/Dockerfile
         args: --file=Dockerfile
         working-directory: ./demo-app
