@@ -1,3 +1,0 @@
-  =>  Original Template Name    : DarkPan - Bootstrap 5 Admin Template
-
-Adjusted to fit the TradingApS project.
